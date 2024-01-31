@@ -23,10 +23,8 @@ pipeline {
 
         stage('Functional') {
           steps {
-            warnError(message: 'Functional problem') {
-              sh 'dotnet test tests/FunctionalTests'
-            }
-
+            warnError(message: 'Functional problem')
+            sh 'dotnet test tests/FunctionalTests'
           }
         }
 
